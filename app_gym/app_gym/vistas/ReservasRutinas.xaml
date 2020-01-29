@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="app_gym.vistas.ReservasRutinas">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Reservar rutinas disponibles"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <ListView x:Name="ContextRutinaLista" HasUnevenRows="true" SeparatorColor="Green" IsPullToRefreshEnabled="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Clicked="ReservarRutina" CommandParameter="{Binding id}" Text="Reservar rutina" />
+                                </ViewCell.ContextActions>
+                                <StackLayout  Orientation="Vertical">
+                                    <Label Text="{Binding nombre}" FontSize="Medium" TextColor="Blue" />
+                                    <Label Text="{Binding descripcion}" FontSize="Small" />
+                                    <Label Text="{Binding dias}" FontSize="Small" HorizontalOptions="StartAndExpand" />
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Hora inicio:" FontAttributes="Bold" HorizontalOptions="Start" FontSize="Micro"></Label>
+                                        <Label Text="{Binding inicio}" FontSize="Micro" TextColor="#503026" HorizontalOptions="End" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+
+                                        <Label Text="Hora fin:" FontAttributes="Bold" HorizontalOptions="Start" FontSize="Micro"></Label>
+                                        <Label Text="{Binding fin}" FontSize="Micro" TextColor="#503026" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
