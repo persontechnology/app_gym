@@ -16,7 +16,7 @@ namespace app_gym
             try
             {
                 HttpClient cliente = new HttpClient();
-                var contenido = await cliente.GetAsync(urlbase + url);
+                var contenido = await cliente.GetAsync(url);
                 if (contenido.StatusCode == HttpStatusCode.OK || contenido.Content != null)
                 {
                     var json = await contenido.Content.ReadAsStringAsync();

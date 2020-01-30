@@ -60,5 +60,10 @@ namespace app_gym.vistas
             }
             return true;
         }
+
+        private async void AccederFacebook(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new FacebookProfilePage());
+        }
     }
 }

@@ -33,6 +33,7 @@
                 <Switch x:Name="switch_recodar"></Switch>
 
                 <Button Text="Acceder" BackgroundColor="Red" Clicked="Acceder" TextColor="White"></Button>
+                <Button Text="Acceder" BackgroundColor="Red" Clicked="AccederFacebook" TextColor="White"></Button>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
