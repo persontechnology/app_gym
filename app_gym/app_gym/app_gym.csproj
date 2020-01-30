@@ -17,6 +17,7 @@
     <None Remove="img\4.png" />
     <None Remove="img\5.png" />
     <None Remove="img\6.png" />
+    <None Remove="img\7.png" />
     <None Remove="img\asistencia.png" />
     <None Remove="img\bienvenido.jpg" />
     <None Remove="img\login.jpg" />
@@ -31,6 +32,7 @@
     <EmbeddedResource Include="img\4.png" />
     <EmbeddedResource Include="img\5.png" />
     <EmbeddedResource Include="img\6.png" />
+    <EmbeddedResource Include="img\7.png" />
     <EmbeddedResource Include="img\asistencia.png" />
     <EmbeddedResource Include="img\bienvenido.jpg" />
     <EmbeddedResource Include="img\login.jpg" />
@@ -70,6 +72,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="vistas\MisRutinas.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="vistas\Reportes.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="vistas\ReservasRutinas.xaml">

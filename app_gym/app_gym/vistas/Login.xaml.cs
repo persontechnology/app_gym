@@ -5,9 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Device = app_gym.modelos.Device;
 
 namespace app_gym.vistas
 {
@@ -39,6 +40,7 @@ namespace app_gym.vistas
                     Settings.IsLoggedIn = estado;
                     Application.Current.MainPage = new NavigationPage(new Inicio());
                     await Navigation.PushAsync(new Inicio());
+                    await DisplayAlert("MENSAJE", "Bienvenido " + Settings.IsEmailIn, "OK");
 
                 }
                 else
@@ -61,9 +63,16 @@ namespace app_gym.vistas
             return true;
         }
 
+        [Obsolete]
         private async void AccederFacebook(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new FacebookProfilePage());
+        }
+
+        private async void resetearPassword(object sender, EventArgs e)
+        {
+            await Browser.OpenAsync(new Uri(ResFull.urlbase+"password/reset"), BrowserLaunchMode.SystemPreferred);
+
         }
     }
 }

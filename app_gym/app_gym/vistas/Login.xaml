@@ -33,7 +33,10 @@
                 <Switch x:Name="switch_recodar"></Switch>
 
                 <Button Text="Acceder" BackgroundColor="Red" Clicked="Acceder" TextColor="White"></Button>
-                <Button Text="Acceder" BackgroundColor="Red" Clicked="AccederFacebook" TextColor="White"></Button>
+                <Button Text="Acceder con Facebook" BackgroundColor="Blue" Clicked="AccederFacebook" TextColor="White"></Button>
+                <Button Text="¿Olvidaste tu contraseña?" BackgroundColor="Transparent" Clicked="resetearPassword" TextColor="Red" FontSize="Small"></Button>
+                
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

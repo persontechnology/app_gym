@@ -1,4 +1,5 @@
 ﻿using app_gym.Helpers;
+using app_gym.vistaModelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,6 +56,11 @@ namespace app_gym.vistas
             Application.Current.MainPage = new NavigationPage(new MainPage());
             await Navigation.PushAsync(new Login());
 
+        }
+
+         async private void Reportes(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Reportes());
         }
     }
 }

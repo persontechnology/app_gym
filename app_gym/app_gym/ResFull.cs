@@ -10,13 +10,13 @@ namespace app_gym
 {
     public class ResFull
     {
-        public const string urlbase = "https://thespartansgym.com/";
+        public const string urlbase = "http://192.168.1.6:8000/";
         public async Task<T> Get<T>(string url)
         {
             try
             {
                 HttpClient cliente = new HttpClient();
-                var contenido = await cliente.GetAsync(url);
+                var contenido = await cliente.GetAsync(urlbase+url);
                 if (contenido.StatusCode == HttpStatusCode.OK || contenido.Content != null)
                 {
                     var json = await contenido.Content.ReadAsStringAsync();

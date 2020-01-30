@@ -67,7 +67,7 @@ namespace app_gym.vistas
                     Settings.IsLoggedIn = true;
                     Application.Current.MainPage = new NavigationPage(new Inicio());
                     await Navigation.PushAsync(new Inicio());
-
+                    await DisplayAlert("MENSAJE", "Bienvenido "+Settings.IsEmailIn, "OK");
                 }
                 else
                 {
