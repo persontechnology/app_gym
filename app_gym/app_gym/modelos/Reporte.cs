@@ -7,6 +7,6 @@ namespace app_gym.modelos
 {
    public class Reporte
     {
-       public string url { get; set; } = ResFull.urlbase + "app-reportes/"+Settings.IsIdIn;
+       public string url { get; set; } = ResFull.urlbase + "mi-estadistica/" + Settings.IsIdIn;
     }
 }
